@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/style.css">       
+
+</head>
+<body>
+    
+       <nav class="nav_bar d-flex justify-content-between p-3 px-5 " id="navBar ">
+        <div class="log d-flex g-4ap-3 align-items-baseline">
+            <span class="logo_icon me-3"><i class="fs-3 fa-solid fa-list-check"></i></span>
+            <h3 class="logo_text fw-bolder fs-3 "><a href="" class="">TaskFlow</a></h3>
+        </div>
+
+       
+       <div class="up_btn" id="up_btn">
+        <i class="fa-solid fa-circle-up fs-2"></i>
+       </div>
+        
+        
+       </nav>
+        <div id="clock" class="mt-3" >
+            <h1 class="fs-3 " id="date-time"></h1>  
+         </div>
+
+       <div class="tasktype_container container row py-5" >
+        <div class="col-md-6 col-sm-12 col-lg-4 p-2">
+            <div class="card p-5 d-flex flex-row justify-content-between align-items-center" id="total_task">
+                <div class="total">
+                    <h5 id="total_head" class="fs-4">Total tasks</h5>
+                    <span class="total_value fs-3 text-center fs-4" id="total_value">15</span>
+                </div>
+                <div class="card_icon_typed opacity-25 p-3 rounded">
+                    <i class="fs-5 fa-solid fa-list"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 col-sm-12 col-lg-4 p-2">
+            <div class="card p-5 d-flex flex-row justify-content-between align-items-center" id="total_task">
+                <div class="total">
+                    <h5 id="completed_head" class="fs-4">completed tasks</h5>
+                    <span class="completed_value fs-3 text-center fs-4" id="completed_value">15</span>
+                </div>
+
+                <div class="card_icon_completed opacity-25 p-3 rounded">
+                    <i class="fs-5  fa-solid fa-circle-check"></i>
+
+                    </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-sm-12 col-lg-4 p-2">
+            <div class="card p-5 d-flex flex-row justify-content-between align-items-center" id="total_task">
+                <div class="total">
+                    <h5 id="pinding_head" class="fs-4">pinding tasks</h5>
+                    <span class="pinding_value  text-center fs-4" id="pinding_value">15</span>
+                </div>
+                <div class="card_icon_pinding  opacity-25 p-3 rounded">
+                    <i class="fs-5 fa-solid fa-list"></i>
+                </div>
+            </div>
+
+        </div>
+
+       </div>
+
+
+       <div class="add_task container row py-5 d-flex justify-content-between align-items-baseline">
+        <div class="input_txet col-sm-12 px-2  col-md-8" >
+            <input type="text" placeholder="whte need to be done ? " class="input_task" name="" id="input_task">
+        </div>
+        <div class="d-flex  justify-content-between pt-4 g-1 col-md-4">
+                <!-- Dropdown -->
+                    <div class="dropdown">
+                    <select class="form-select priority-select">
+                        <option selected>Priority</option>
+                        <option value="high_priority">High</option>
+                        <option value="low_priority">Low</option>
+                    </select>
+                    </div>
+
+
+
+                <!-- Add Task Button -->
+                <button class="btn-task" id="add_a_task">+ Add Task</button>
+            </div>
+       </div>
+   
+      <div class="type_task d-flex flex-wrap gap-2 m-auto container mt-3 align-items-center justify-content-center">
+                            <button class="btn-task-all active_type" id="all_task_btn">All Tasks</button>
+                            <button class="btn-task-all" id="low_priority_task_btn">low priority</button>
+                            <button class="btn-task-all" id="completed_task_btn">Completed Tasks</button>
+                            <button class="btn-task-all" id="high_priority_task_btn">High Priority</button>
+                        </div>
+
+        <div class=" display_task container  d-flex g-3 flex-column mb-5" id="display_task">
+                       
+                        
+                       
+                         <div class="task_card d-flex g-2 my-5 px-3 ">
+                                    <label>
+                                        <input type="checkbox" class="circle-checkbox mt-3 me-2">
+                                        
+                                    </label>
+                                <div class="task_text d-flex flex-column gap-4 ms-2">
+                                    <h5 class="task_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi.</h5>
+                                    <div class="task_detail ">
+                                        <span class="task_stat badge fs-6 comp d-inline-block me-2"  >complete</span>
+                                        <span class="task_date text-secondary d-inline-block">2023-03-15</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="task_actions d-flex flex-column flex-md-row align-items-center gap-2 ms-auto ">
+                                    <button class="edit_btn btn btn-lg text-secondary"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="delete_btn btn btn-lg text-secondary"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+
+                        </div>
+               
+
+        </div>
+            
+
+
+
+
+<footer style="background-color:#1F2937; color:#f1f1f1; text-align:center; padding:10px 0; 
+    font-family:Arial, sans-serif; font-size:14px; 
+    width:100%;">
+    <p>&copy; 2025 All Rights Reserved | Mohamed Khater</p>
+</footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
